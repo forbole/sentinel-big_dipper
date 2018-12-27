@@ -234,19 +234,20 @@ Meteor.methods({
                                     // validator.address = validator.address[0].trim();
                                     validator.hex = result.match(/\s[0-9A-F]{64}$/igm);
                                     validator.hex = validator.hex[0].trim();
-                                    validator.cosmosaccpub = result.match(/cosmospub.*$/igm);
+                                    validator.cosmosaccpub = result.match(/cosmosaccpub.*$/igm);
                                     validator.cosmosaccpub = validator.cosmosaccpub[0].trim();
-                                    validator.owner = result.match(/cosmosvaloperpub.*$/igm);
-                                    validator.owner = validator.owner[0].trim();
-                                    validator.consensus_pubkey = result.match(/cosmosvalconspub.*$/igm);
+                                    // validator.owner = result.match(/cosmosvaloperpub.*$/igm);
+                                    // validator.owner = validator.owner[0].trim();
+                                    validator.consensus_pubkey = result.match(/cosmosvalpub.*$/igm);
                                     validator.consensus_pubkey = validator.consensus_pubkey[0].trim();
 
                                     for (val in validatorSet){
                                         console.log(validatorSet[val]);
                                         console.log(validator);
                                         console.log("hello")
-                                        if (validatorSet[val].consensus_pubkey == validator.consensus_pubkey){
-                                            validator.jailed = validatorSet[val].jailed;
+                                        if (validatorSet[val].pub_key == validator.consensus_pubkey){
+                                            validator.owner = validatorSet[val].owner;
+                                            validator.revoked = validatorSet[val].revoked;
                                             validator.status = validatorSet[val].status;
                                             validator.tokens = validatorSet[val].tokens;
                                             validator.delegator_shares = validatorSet[val].delegator_shares;
