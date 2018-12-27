@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'averta-thin';
+    src: url('/fonts/averta_thin-webfont.woff2') format('woff2'),
+         url('/fonts/averta_thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'averta';
+    src: url('/fonts/averta-webfont.woff2') format('woff2'),
+         url('/fonts/averta-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'averta-bold';
+    src: url('/fonts/averta_bold-webfont.woff2') format('woff2'),
+         url('/fonts/averta_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-size: inherit !important;
+}
+
+.not-found{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+}
+
+.not-found i{
+    font-size: 6em;
+    margin-top:0.5em;
+}
+
+div#loading {
+    visibility: hidden;
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #bd081c; /* Forbole Red */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    align-self: center;
+    position: fixed;
+    z-index: 9999;
+    top: 35%;
+    left: 45%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#footer{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    line-height: 1;
+}
+
+div#main{
+    padding-top: 6rem;
+    padding-bottom: 4.8rem;
+}
+
+table#block-table, 
+table.random-validators, 
+table.validator-list,
+table.proposal-list {
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;    
+}
+table#block-table td, 
+table.random-validators td,
+table.validator-list td,
+table.proposal-list td{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+table th.voting-power,
+table td.voting-power{
+    text-align:right;
+}
+
+table td.voting-power{
+    font-family: 'Inconsolata', monospace;
+}
+
+table#block-table th.height{
+    width: 15%;
+}
+
+table#block-table th.hash{
+    max-width: 35%;
+}
+
+table#block-table th.no-of-txs{
+    width: 20%;
+}
+
+table#block-table th.time{
+    width: 30%;
+}
+
+table.random-validators th.moniker{
+    width: 30%;
+}
+
+table.random-validators th.voting-power{
+    width: 20%
+}
+
+table.random-validators th.uptime{
+    width: 50%;
+}
+
+table.validator-list th{
+    border-bottom: none !important;
+}
+
+/* table.validator-list th.counter{
+    width: 5%;
+} */
+
+table.validator-list th.moniker{
+    width: 20%;
+}
+
+table.validator-list th.voting-power{
+    width: 25%
+}
+
+table.validator-list th.uptime{
+    width: 25%;
+}
+
+table.validator-list th.last-seen{
+    width: 25%;
+}
+
+table.proposal-list th.status{
+    width: 15%;
+}
+
+th i.material-icons{
+    vertical-align: middle;
+}
+.status .value{
+    display: block;
+    font-family: "averta-thin", sans-serif;
+    -webkit-transition: all 2s ease-out;
+    -moz-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+}
+
+#home .card{
+    margin: 0.75em 0;
+}
+
+.progress{
+    height: inherit !important;
+    font-size: inherit !important;
+    border: 1px solid #ddd !important;
+}
+
+.proposal{
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.proposal .label, 
+.proposal .value {
+    padding: 0.3em;
+}
+
+.proposal .label{
+    font-weight: bold;
+}
+
+.proposal .tally-result i.fas{
+    min-width: 1.5em;
+}
