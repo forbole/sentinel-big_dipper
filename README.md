@@ -1,17 +1,7 @@
 # Big Dipper
-Forbole Block Explorer for Cosmos
+Forbole Block Explorer for Sentinel testnet
 
 ## Demo
-[Explore Cosmos Testnet (gaia-9001) with The Big Dipper](https://bigdipper.forbole.com)
+[Explore Sentinel Testnet (Sentinel-testnet-1.1) with The Big Dipper]
 
-## How to run The Big Dipper
 
-1. Copy `settings.json.default` to `settings.json`.
-2. Update paths to `gaiacli` and `gaiadebug`.
-3. Update the RPC and LCD URLs.
-
-```
-meteor npm install
-meteor update
-meteor --settings settings.json
-```
